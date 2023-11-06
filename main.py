@@ -5,22 +5,40 @@ def fib_recursive(n, counts):
     each time fib_recursive(i, counts) is called.
     """    
     counts[n] += 1
-    ###TODO
-    pass
-    
-
+    print(counts)
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    else:
+        return fib_recursive(n - 1, counts) + fib_recursive(n - 2, counts)
     
 def fib_top_down(n, fibs):
-    ###TODO
-    pass
-
+    print(n, fibs)
+    if (fibs[n] != -1):
+        return fibs[n]
+    else:
+        if n == 1:
+            fibs[1] = 1
+            return 1
+        elif n == 2:
+            fibs[2] = 1
+            return 1
+        else:
+            fibs[n] = fib_top_down(n - 1, fibs) + fib_top_down(n - 2, fibs)
+            return fibs[n]
 
 def fib_bottom_up(n):
-    ###TODO
-    pass
-
-
-
+    a = 1
+    b = 0
+    c = 0
+    i = 1
+    while (i < n):
+        c = a + b
+        b = a
+        a = c
+        i += 1
+    return c
 
 def fib_bottom_up_better(n):
     ###TODO
