@@ -43,3 +43,20 @@ def fib_bottom_up(n):
 def fib_bottom_up_better(n):
     ###TODO
     pass
+
+
+"""
+n = 10
+counts = [0] * (n+1)
+fib_recursive(n, counts)
+print(counts)
+print(sum(counts))
+"""
+
+n = 2
+fibs = [-1] * (n+1)
+fib_top_down(n, fibs)
+#print(fibs)
+
+n = 10
+fib_bottom_up(n)
